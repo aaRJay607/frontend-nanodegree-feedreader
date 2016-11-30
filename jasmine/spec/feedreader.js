@@ -87,8 +87,9 @@ $(function() {
          beforeEach(function(done) {    // Done is used for async requests
            loadFeed(0,done);    // First feed is called
          });
+         
          it('have atleast a single entry element', function(done) {
-           expect($('.entry').length>0).toBe(true);   // Here jQuery selects all elements with .entry class.
+           expect($('.feed .entry').length).toBeGreaterThan(0);   // Here jQuery selects all elements with .entry class.
            done();
          });
     });
