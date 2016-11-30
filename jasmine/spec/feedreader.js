@@ -101,9 +101,9 @@ $(function() {
          * Remember, loadFeed() is asynchronous.
          */
         beforeEach(function(done) {
-          loadFeed(0, function() {    // First feed is called here
+          loadFeed(1, function() {    // First feed is called here
             feed1 = $('.feed').html();
-            loadFeed(1, function() {    // Second feed is called here
+            loadFeed(0, function() {    // Second feed is called here
               feed2 = $('.feed').html();
               done();   //Done should be called when the async work is complete.
             });
